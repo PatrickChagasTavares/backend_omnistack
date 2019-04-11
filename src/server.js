@@ -13,7 +13,7 @@ const io = require("socket.io")(server);
 
 io.on("connection", socket => {
     socket.on("connectRoom", box => {
-        socket.json(box);
+        socket.join(box);
     })
 });//ok
 
